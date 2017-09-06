@@ -405,7 +405,11 @@ class Militar{
 		var fechaAsc = Util.ConvertirFechaHumana(militar.fascenso);
 		var ts = Util.CalcularTServicio(militar.fingreso,militar.fretiro,situac)
 		var fehora = Util.FechaHora();
-		var datF="";
+		var datF=""; 
+		var annioS = ts.substr(0, 2);
+		var mesS = ts.substr(7, 2);
+		var diaS = ts.substr(15, 2);
+
 		var url = "../images/grados/" + militar.Grado.abreviatura + ".png";
 		url = url.toLowerCase();
 		$("#_Constgrado").attr("src", url);
@@ -416,7 +420,6 @@ class Militar{
 			rutaimg = Conn.URLTEMP;
 			url = rutaimg + $("#_cedula").val() + "/foto.jpg";
 		}
-		console.log(militar);
 		//$("#minifoto").attr("href", url);
 		$("#_img").attr("src", url);
 		$('#_contenidoFamiliares').html(datF);
@@ -434,7 +437,9 @@ class Militar{
 		$('#_lblaServicio').html(ts);
 		$('#_FechaActual').html(fecha);
 		$('#_fecha').html(fehora);
-		$('#_correoE').html(militar.persona.correo)
+		$('#_anniosserv').html(annioS);
+		$('#_messerv').html(mesS);
+		$('#_diasserv').html(diaS);
 		
 			militar.Familiar.forEach(v => {
 			var DBF = v.Persona.DatoBasico;

@@ -27,7 +27,7 @@
   </script>
 </head>
 <body onload="Consultar()">
-<input type="hidden" value="<?php echo '16872776';?>" id="_cedula"> 
+<input type="hidden" value="<?php echo '10107698';?>" id="_cedula"> 
   <table border="0" width="100%" style="margin: 0 auto;">
     <tr>
       <td width="15%" valign="top" rowspan="2"><img  style="width: 100px;height: 100px; margin-left: 0px" class="img-responsive file-path-wrapper-pre-view" src="../images/logo_ipsfa.png" id="_imgescudo"/>
